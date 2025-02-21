@@ -1,0 +1,53 @@
+<div class="container">
+  <h2>User List</h2>
+  
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+    </tr>
+    <tr *ngFor="let user of users">
+      <td>{{ user.user_id }}</td>
+      <td>{{ user.name }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </table>
+<br>
+  <!-- To-Do List Section -->
+  <section>
+    <h2>Build a Dynamic To-Do App</h2>
+    
+    <div>
+      <input type="text" [(ngModel)]="newTask" placeholder="Enter a new task" />
+      <button class="add" (click)="addTask()">Add Task</button>
+    </div>
+
+    <ul>
+      <li *ngFor="let task of tasks; let i = index">
+        <span [class.completed]="task.completed">{{ task.name }}</span>
+        <button class="complete" (click)="toggleTask(i)">✔</button>
+        <button class="delete" (click)="deleteTask(i)">❌</button>
+      </li>
+    </ul>
+  </section>
+<br>
+  <!-- CRUD Operations with Local Storage -->
+  <section>
+    <h2>CRUD Operations with Local Storage</h2>
+    
+    <div>
+      <input type="text" [(ngModel)]="newUser.name" placeholder="Enter name" />
+      <input type="text" [(ngModel)]="newUser.email" placeholder="Enter email" />
+      <button class="add" (click)="addUser()">Add User</button>
+    </div>
+
+    <ul>
+      <li *ngFor="let user of localUsers; let i = index">
+        <span>{{ user.name }} ({{ user.email }})</span>
+        <button class="edit" (click)="editUser(i)">✏</button>
+        <button class="delete" (click)="deleteUser(i)">❌</button>
+      </li>
+    </ul>
+  </section>
+</div>
