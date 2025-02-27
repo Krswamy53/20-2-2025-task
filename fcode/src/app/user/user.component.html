@@ -1,6 +1,6 @@
 <div class="container">
   <h2>User List</h2>
-  
+
   <table>
     <tr>
       <th>ID</th>
@@ -13,11 +13,11 @@
       <td>{{ user.email }}</td>
     </tr>
   </table>
-<br>
+  <br>
   <!-- To-Do List Section -->
   <section>
     <h2>Build a Dynamic To-Do App</h2>
-    
+
     <div>
       <input type="text" [(ngModel)]="newTask" placeholder="Enter a new task" />
       <button class="add" (click)="addTask()">Add Task</button>
@@ -31,11 +31,11 @@
       </li>
     </ul>
   </section>
-<br>
+  <br>
   <!-- CRUD Operations with Local Storage -->
   <section>
     <h2>CRUD Operations with Local Storage</h2>
-    
+
     <div>
       <input type="text" [(ngModel)]="newUser.name" placeholder="Enter name" />
       <input type="text" [(ngModel)]="newUser.email" placeholder="Enter email" />

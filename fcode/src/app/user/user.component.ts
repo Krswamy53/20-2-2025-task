@@ -19,7 +19,7 @@ export class UserComponent implements OnInit {
   newUser = { name: '', email: '' };
   localUsers: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.fetchUsers();
